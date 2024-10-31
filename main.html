@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн Церква</title>
+</head>
+<body>
+
+    <!-- Заголовок сайту -->
+    <header>
+        <h1>Ласкаво просимо до нашої Онлайн Церкви</h1>
+    </header>
+
+    <!-- Секція підписки -->
+    <section id="subscribe">
+        <h2>Підписка на віру</h2>
+        <form action="#">
+            <label for="faithType">Оберіть тип християнства:</label>
+            <select id="faithType" name="faithType">
+                <option value="orthodox">Православ'я</option>
+                <option value="catholic">Католицизм</option>
+                <option value="protestant">Протестантизм</option>
+            </select>
+            <button type="submit">Підписатися</button>
+        </form>
+    </section>
+
+    <!-- Секція новин та загальної інформації -->
+    <section id="generalInfo">
+        <h2>Інформація для всіх</h2>
+        <ul>
+            <li><a href="#news">Новини церкви</a></li>
+            <li><a href="#location">Розташування церкви</a></li>
+            <li><a href="#confessions">Коли проходять сповіді</a></li>
+        </ul>
+    </section>
+
+    <!-- Секція для підписників -->
+    <section id="subscriberFeatures">
+        <h2>Функції для підписників</h2>
+        <ul>
+            <li><a href="#prayRequest">Подати за упокій/за здоров’я</a></li>
+            <li><a href="#candle">Поставити свічку</a></li>
+            <li><a href="#confession">Записатись на сповідь</a></li>
+            <li><a href="#onlineConfession">Онлайн сповідь</a></li>
+        </ul>
+    </section>
+
+    <!-- Запис на хрестини -->
+    <section id="baptism">
+        <h2>Запис на хрестини дитини</h2>
+        <form action="#">
+            <label for="baptismName">Ім'я дитини:</label>
+            <input type="text" id="baptismName" name="baptismName" required>
+            <label for="baptismDate">Дата хрестин:</label>
+            <input type="date" id="baptismDate" name="baptismDate" required>
+            <button type="submit">Записатись</button>
+        </form>
+    </section>
+
+    <!-- Секція з продажем мерчу -->
+    <section id="merch">
+        <h2>Наш мерч</h2>
+        <p>Придбати свічки, ікони та інші релігійні товари.</p>
+        <!-- Тут нада додати каталог товарів -->
+    </section>
+
+    <!-- Онлайн резервація лавочок -->
+    <section id="benchReservation">
+        <h2>Резервація лавочок</h2>
+        <form action="#">
+            <label for="benchNumber">Оберіть лавочку:</label>
+            <input type="number" id="benchNumber" name="benchNumber" min="1" max="50" required>
+            <button type="submit">Зарезервувати</button>
+        </form>
+        <p>Підписники отримують знижку на резервування!</p>
+    </section>
+
+    <!-- Скринька пожертвувань -->
+    <section id="donations">
+        <h2>Скринька пожертвувань</h2>
+        <p>Зробіть свій внесок для підтримки нашої церкви.</p>
+        <form action="#">
+            <label for="donationAmount">Сума пожертви (₴):</label>
+            <input type="number" id="donationAmount" name="donationAmount" min="1" required>
+            <button type="submit">Пожертвувати</button>
+        </form>
+    </section>
+    <!--Оце шо нтжце робить так шоб тікі цифри приймались-->>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const numberInputs = document.querySelectorAll('input[type="number"]');
+            numberInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                });
+            });
+        });
+    </script>
+
+    <!-- Футер сайту -->
+    <footer>
+        <p>&copy; 2024 Онлайн Церква. Усі права захищено.</p>
+    </footer>
+
+</body>
+</html>
